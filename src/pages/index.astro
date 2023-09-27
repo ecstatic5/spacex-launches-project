@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Launch from '../components/ui/Launch.astro';
 
-const res = await fetch("https://api.spacexdata.com/v3/launches?limit=10")
+const res = await fetch("https://api.spacexdata.com/v3/launches?limit=100")
 const data = await res.json()
 
 ---
