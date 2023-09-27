@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Launch from '../components/ui/Launch.astro';
+
+const res = await fetch("https://api.spacexdata.com/v3/launches?limit=10")
+const data = await res.json()
+
+---
+
+<Layout title="SpaceX Launches">
+  <main class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 mt-6 w-full h-full lg:grid-cols-4">
+    {data.map(val =>
+     <Launch
+        title={val.mission_name}
+        details={val.details}
+        image={val.links.mission_patch_small}
+        date={val.launch_year}
+      />)}
+  </main>
+</Layout>

@@ -1,0 +1,18 @@
+---
+interface Props {
+  image: string,
+  title: string,
+  details: string,
+  date: string
+}
+
+const { image, title, details, date } = Astro.props;
+---
+<article class="flex flex-col bg-zinc-800 rounded-lg text-gray-300 m-0 py-2 px-2 items-center justify-center">
+  <section class="flex flex-col items-center justify-center gap-4">
+    <h1 class="text-orange-500 text-2xl font-medium font-martian text-center">{title}</h1>
+    <img src={image} alt="Launch" class="w-40">
+    <p class="text-center text-md md:text-sm lg:text-lg">{details || "No details"}</p>
+  </section>
+  <footer class="text-xl font-bold text-blue-500 text-center m-0">Year of launch: {date}</footer>
+</article>

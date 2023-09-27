@@ -1,0 +1,14 @@
+---
+import MoreProjects from "../buttons/MoreProjects.astro";
+import SourceCode from "../buttons/SourceCode.astro";
+---
+
+<header class="flex flex-col w-full justify-center items-center p-5 animate-fade-down gap-6">
+  <h1 class="text-5xl md:text-6xl font-martian text-zinc-300 text-center">
+    SpaceX Launches
+  </h1>
+  <nav class="animate-fade-up animate-delay-[500ms] flex flex-col gap-2 md:gap-4 md:flex-row justify-center items-center text-xl text-center font-mono">
+    <SourceCode/>
+    <MoreProjects/>
+  </nav>
+</header>
