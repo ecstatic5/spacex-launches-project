@@ -3,11 +3,11 @@ import MoreProjects from "../buttons/MoreProjects.astro";
 import SourceCode from "../buttons/SourceCode.astro";
 ---
 
-<header class="flex flex-col w-full justify-center items-center p-5 animate-fade-down gap-6">
-  <h1 class="text-5xl md:text-6xl font-martian text-zinc-300 text-center">
+<header class="flex flex-col w-full justify-center items-center py-4 animate-fade-down gap-3 bg-black mb-5 sticky top-0">
+  <h1 class="text-3xl md:text-4xl font-martian text-zinc-300 text-center animate-fade animate-duration-[2000ms]">
     SpaceX Launches
   </h1>
-  <nav class="animate-fade-up animate-delay-[500ms] flex flex-col gap-2 md:gap-4 md:flex-row justify-center items-center text-xl text-center font-mono">
+  <nav class="animate-fade-down animate-delay-[500ms] flex flex-col gap-2 md:gap-4 md:flex-row justify-center items-center text-md text-center font-mono">
     <SourceCode/>
     <MoreProjects/>
   </nav>
